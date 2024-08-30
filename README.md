@@ -1,5 +1,11 @@
-# learningC
-Hi this is me 2024 im learning c 
+# Learning C
 
-# Notes:
-1. if u want to open the program in gitbash u should make it as .exe first then u open it with this code <./nameofprogram>
+Hi there! Welcome to my C learning journey in 2024.
+
+## Notes
+
+- If you want to run the program in Git Bash, you should first compile it into a `.exe` file. 
+- Once compiled, you can open it with the following command:
+
+```bash
+./nameofprogram.exe
