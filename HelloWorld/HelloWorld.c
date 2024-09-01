@@ -18,33 +18,45 @@
 
 // scanf to get input from user
 // fgets to get input with white spaces from user
+// logical operators same to c#
 int main()
 {
-    char unit;
-    double temp, newtemp;
+    char operator;
+    double num1, num2, result;
 
-    printf("\nIs the temprature in F or on C: ");
-    scanf("%c", &unit);
-    char unitUpercase = toupper(unit);
+    printf("\nEnter an operator: ");
+    scanf("%c", &operator);
 
-    printf("\nWrite the temp: ");
-    scanf("%lf", &temp);
+    printf("\nWrite the first number :");
+    scanf("%lf", &num1);
 
-    switch (unitUpercase) {
+    printf("\nWrite the second number: ");
+    scanf("%lf", &num2);
 
-        case 'C':
-            newtemp = (temp * (9.0 / 5.0)) + 32.0;
-            printf("%.1lfC is: ", temp);
-            printf("%.1lfF", newtemp);
-            break;
-            
-        case 'F':
+    switch (operator)
+    {
 
-            newtemp = (temp - 32.0) * (5.0 / 9.0);
-            printf("%.1lfF is: ", temp);
-            printf("%.lfC", newtemp);
-            break;
-        default:
+    case '+':
+        result = num1 + num2;
+        printf("%.1lf", result);
+        break;
+
+    case '-':
+        result = num1 - num2;
+        printf("%.1lf", result);
+        break;
+
+    case '/':
+
+        result = num1 / num2;
+        printf("%.1lf", result);
+        break;
+    case '*':
+
+        result = num1 * num2;
+        printf("%.1lf", result);
+        break;
+    default:
         printf("Wrong argument");
     }
 
