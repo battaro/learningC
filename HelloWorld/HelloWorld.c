@@ -1,4 +1,5 @@
 #include <stdio.h> //when we say "std" we are saying standard, "io" stand for input and output
+
 #include <stdbool.h>
 #include <string.h>
 #include <math.h>
@@ -19,46 +20,20 @@
 // scanf to get input from user
 // fgets to get input with white spaces from user
 // logical operators same to c#
+// functions and arguments also same as c#
+//ternary opertator = shortcut to if/else when assigning/returning a value.
+//(condition) ? value if true : value if false.
+//   for example return(a>b) ? a : b;
+
+// Function prototype, Ensures that calls to a function are made with the correct arguments.
+// Use the Function that you want up like : void FunctionName(arg1,arg2);
+int findMax(int a,int b)
+{
+    return (a>b) ? a : b;
+}
 int main()
 {
-    char operator;
-    double num1, num2, result;
-
-    printf("\nEnter an operator: ");
-    scanf("%c", &operator);
-
-    printf("\nWrite the first number :");
-    scanf("%lf", &num1);
-
-    printf("\nWrite the second number: ");
-    scanf("%lf", &num2);
-
-    switch (operator)
-    {
-
-    case '+':
-        result = num1 + num2;
-        printf("%.1lf", result);
-        break;
-
-    case '-':
-        result = num1 - num2;
-        printf("%.1lf", result);
-        break;
-
-    case '/':
-
-        result = num1 / num2;
-        printf("%.1lf", result);
-        break;
-    case '*':
-
-        result = num1 * num2;
-        printf("%.1lf", result);
-        break;
-    default:
-        printf("Wrong argument");
-    }
-
+    int max = findMax(3,4);
+    printf("%d",max);
     return 0;
 }
