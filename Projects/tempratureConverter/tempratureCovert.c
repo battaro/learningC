@@ -6,6 +6,7 @@
 
 int main()
 {
+    //new variable
     char unit;
     double temp, newtemp;
 
