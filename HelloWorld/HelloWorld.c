@@ -1,9 +1,9 @@
 #include <stdio.h> //when we say "std" we are saying standard, "io" stand for input and output
-
 #include <stdbool.h>
 #include <string.h>
 #include <math.h>
 #include <ctype.h>
+findMax(int a,int b);
 // when we write "//" this is a comment
 
 /*this also a comment*/
@@ -27,13 +27,15 @@
 
 // Function prototype, Ensures that calls to a function are made with the correct arguments.
 // Use the Function that you want up like : void FunctionName(arg1,arg2);
-int findMax(int a,int b)
-{
-    return (a>b) ? a : b;
-}
+// for and while loop same as c#
+//do while loop same as c#
 int main()
 {
-    int max = findMax(3,4);
-    printf("%d",max);
+    for (int i = 0; i < 5; i++)
+    {
+                                    
+    }
+    
+    
     return 0;
 }
