@@ -29,13 +29,18 @@ findMax(int a,int b);
 // Use the Function that you want up like : void FunctionName(arg1,arg2);
 // for and while loop same as c#
 //do while loop same as c#
+//arrays almost same as c# though <3
 int main()
 {
-    for (int i = 0; i < 5; i++)
-    {
-                                    
-    }
-    
-    
+    char x = 'x';
+    char y = 'y';
+
+    char remember_y = y;
+    y = x;
+    x = remember_y;
+
+    printf("%c",x);
+    printf("\n%c",y);
+
     return 0;
 }
