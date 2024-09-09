@@ -3,7 +3,7 @@
 #include <string.h>
 #include <math.h>
 #include <ctype.h>
-findMax(int a,int b);
+#include <time.h>
 // when we write "//" this is a comment
 
 /*this also a comment*/
@@ -21,26 +21,43 @@ findMax(int a,int b);
 // fgets to get input with white spaces from user
 // logical operators same to c#
 // functions and arguments also same as c#
-//ternary opertator = shortcut to if/else when assigning/returning a value.
+// ternary opertator = shortcut to if/else when assigning/returning a value.
 //(condition) ? value if true : value if false.
 //   for example return(a>b) ? a : b;
 
 // Function prototype, Ensures that calls to a function are made with the correct arguments.
 // Use the Function that you want up like : void FunctionName(arg1,arg2);
 // for and while loop same as c#
-//do while loop same as c#
-//arrays almost same as c# though <3
+// do while loop same as c#
+// arrays almost same as c# though <3
+
+// struct = collection of related members ("variables")
+//          they can be different data types
+//          listed under one name in a block of memory
+//          very similar to classes in other languages (but no methods)
+
+//typedef almost same to struct
+
+struct Student
+{
+    char name[12];
+    float gpa;
+};
+
 int main()
 {
-    char x = 'x';
-    char y = 'y';
+    struct Student st1 = {"battar",3.0};
+    struct Student st2 = {"brother",2.0};
+    struct Student st3 = {"me",4.0};
+    struct Student st4 = {"hamza",5.0};
 
-    char remember_y = y;
-    y = x;
-    x = remember_y;
-
-    printf("%c",x);
-    printf("\n%c",y);
-
+    struct Student students[] = {st1,st2,st3,st4};
+    int studentslength = sizeof(students) / sizeof(students[0]); 
+    for (int i = 0; i < studentslength; i++)
+    {
+        printf("%s",students[i].name);
+        printf("%f\n",students[i].gpa);
+    }
+    
     return 0;
 }
