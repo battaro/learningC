@@ -4,6 +4,7 @@
 #include <math.h>
 #include <ctype.h>
 #include <time.h>
+#include <stdlib.h>
 // when we write "//" this is a comment
 
 /*this also a comment*/
@@ -36,28 +37,46 @@
 //          listed under one name in a block of memory
 //          very similar to classes in other languages (but no methods)
 
-//typedef almost same to struct
+// typedef almost same to struct
 
-struct Student
-{
-    char name[12];
-    float gpa;
-};
+// Bitwise AND (&)
+// Compares each bit of a and b. If both bits are 1, the result is 1; otherwise, it is 0.
+// 0101 & 0011 = 0001 (1 in decimal)
 
+// Bitwise OR (|)
+// Compares each bit of a and b. If at least one bit is 1, the result is 1; otherwise, it is 0.
+// 0101 | 0011 = 0111 (7 in decimal)
+
+// Bitwise XOR (^)
+// Compares each bit of a and b. If the bits are different, the result is 1; otherwise, it is 0.
+// 0101 ^ 0011 = 0110 (6 in decimal)
+
+// Bitwise NOT (~)
+// Inverts all the bits of a number (i.e., 1 becomes 0 and 0 becomes 1).
+// ~0101 = 1010 (in a system with 32 bits, this is represented as a two's complement negative number)
+// Note: Result is machine dependent because it works on all bits of the integer.
+
+// Left Shift (<<)
+
+// Right Shift (>>)
+// Shifts the bits of a number to the right by the specified number of positions.
+// Right shifting 0101 (5) by 1 position gives 0010 (2 in decimal)
+
+// pointer = a "variable-like" reference that holds a memory address to another variable, array etc..
+//              some tasks are performed more easily with pointers
+//              * = indirection operator (value of address)
 int main()
 {
-    struct Student st1 = {"battar",3.0};
-    struct Student st2 = {"brother",2.0};
-    struct Student st3 = {"me",4.0};
-    struct Student st4 = {"hamza",5.0};
+    srand(time(0));
+    int r,c;
+    int rowValues[3] = {0, 2, 4};
+    int ColumnValues[3] = {1, 5, 9};
 
-    struct Student students[] = {st1,st2,st3,st4};
-    int studentslength = sizeof(students) / sizeof(students[0]); 
-    for (int i = 0; i < studentslength; i++)
-    {
-        printf("%s",students[i].name);
-        printf("%f\n",students[i].gpa);
-    }
-    
-    return 0;
+    int randRowIndex = rand() % 3;
+    int randColumnIndex = rand() % 3;
+
+    r = rowValues[randRowIndex];
+    c = ColumnValues[randColumnIndex];
+
+    printf("Row : %d Column: %d",r,c);
 }

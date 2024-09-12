@@ -32,7 +32,7 @@ int main()
     Question questions[] = {question1, question2, question3};
     int questionsLength = sizeof(questions) / sizeof(questions[0]); //length of questions array
 
-    int correct_answers = 0; // correct answers counter
+    int score = 0; // score counter
     for (int i = 0; i < questionsLength; i++)
     {
         for (int j = 0; j < 4; j++)
@@ -48,16 +48,15 @@ int main()
         if (_answer == questions[i].answer)
         {
             printf("You are Correct! \'%c\' is the correct answer\n",_answer);
-            correct_answers++;
+            score++;
         } else 
         {
             printf("You are Wrong! \'%c\' is the not correct answer\n",questions[i].answer);
-            correct_answers--;
+            score--;
         }
         
     }
-    printf("You've got %d out of ",correct_answers);
-    printf("%d ",questionsLength);
+    printf("\nQuiz completed! Your final score is %d out of %d.\n", score, questionsLength);
     return 0;
 }
 
