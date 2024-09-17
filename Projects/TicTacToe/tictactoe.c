@@ -107,6 +107,10 @@ bool checkWin(char symbol)
     return false;
 }
 
+//   This function will get a random row and column index and check if the
+//  space at that position is empty. If it is, it will make the move and
+//  stop the loop. If not, it will continue the loop until an empty space
+//  is found.
 void ComputerTurn()
 {
     srand(time(0));
@@ -131,7 +135,7 @@ void ComputerTurn()
 }
 
 void UserTurn()
-{
+{    
 
     // adjust to be a right row
     if (User.row == 1)
@@ -214,7 +218,11 @@ void TheMainFunction()
 
 void clearScreen()
 {
-    system("cls"); // clear the terminal
+#ifdef _WIN32
+    system("cls");
+#elif defined(__linux__) || defined(__APPLE__) // copied from chatgpt :|
+    system("clear");
+#endif
 }
 int main()
 {
@@ -237,6 +245,6 @@ int main()
     return 0;
 }
 
-// 4 hours in this project :skull emoji:
+// 4 hours in this project :skull-emoji:
 // good train i guess i learned alot from this project
 // you may have some problems if your not in windows
