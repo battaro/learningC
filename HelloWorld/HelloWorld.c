@@ -65,18 +65,28 @@
 // pointer = a "variable-like" reference that holds a memory address to another variable, array etc..
 //              some tasks are performed more easily with pointers
 //              * = indirection operator (value of address)
+
+// sleep function used to delay the program execution for a specified number of milliseconds
+// for example sleep(1000) = 1 second will be delayed
+
+// basicly /r in printf will moves the cursor back to the beginning of the current line
+// so when i print something after the /r, it overwrites the text that was previously there on the same line
+// for example : printf("\rLoading: 25%%"); then printf("\rLoading: 50%%"); if i put sleep function
+//                                                 between them, it will print 50% on the same line
+
 int main()
 {
-    srand(time(0));
-    int r,c;
-    int rowValues[3] = {0, 2, 4};
-    int ColumnValues[3] = {1, 5, 9};
+    printf("Loading...\n");
 
-    int randRowIndex = rand() % 3;
-    int randColumnIndex = rand() % 3;
+    printf("Progress: 25%%");
+    Sleep(2000);
 
-    r = rowValues[randRowIndex];
-    c = ColumnValues[randColumnIndex];
+    printf("\rProgress: 50%%");
+    Sleep(2000);
+    printf("\rProgress: 75%%");
+    Sleep(2000);
 
-    printf("Row : %d Column: %d",r,c);
+    printf("\rProgress: 100%%\n");
+
+    return 0;
 }
