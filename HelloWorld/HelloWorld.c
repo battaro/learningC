@@ -67,16 +67,6 @@
 //              * = indirection operator (value of address)
 int main()
 {
-    srand(time(0));
-    int r,c;
-    int rowValues[3] = {0, 2, 4};
-    int ColumnValues[3] = {1, 5, 9};
 
-    int randRowIndex = rand() % 3;
-    int randColumnIndex = rand() % 3;
-
-    r = rowValues[randRowIndex];
-    c = ColumnValues[randColumnIndex];
-
-    printf("Row : %d Column: %d",r,c);
+    return 0;
 }
