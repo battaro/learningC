@@ -6,21 +6,26 @@
 #include <errno.h>   // For error handling in file operations
 #include <windows.h> // For console window operations
 
+// User Experience
 void welcome();
+void progressBar(int percent);
+
+// Task Management
 void addtask();
 void viewtasks();
 void markTaskAsDone();
 void deleteTask();
 void exitTask();
+
 void mainfunction();
 void clearScreen();
-void progressBar(int percent);
 int generateTaskId();
 
 // file management functions
 void ReadTaksFile();
 void WriteTaksFile();
 
+// global variables
 typedef struct
 {
     int taskid;
@@ -32,7 +37,7 @@ typedef struct
 } Task;
 
 Task tasks[1000];  // array to store staks
-int taskCount = 0; // global variable to track the number of tasks
+int taskCount = 0; // global integer to track the number of tasks
 
 void welcome()
 {
@@ -295,7 +300,7 @@ void mainfunction()
 
 void WriteTaksFile()
 {
-    FILE *file = fopen("tasks.txt", "w");
+    FILE *file = fopen("tasks.txt", "w"); // the file will be created in the current directory
     if (file == NULL)
     {
         printf("Error Opening File\n");
