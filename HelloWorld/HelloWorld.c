@@ -76,9 +76,7 @@
 
 int main()
 {
-<<<<<<< HEAD
 
-=======
     printf("Loading...\n");
 
     printf("Progress: 25%%");
@@ -91,6 +89,5 @@ int main()
 
     printf("\rProgress: 100%%\n");
 
->>>>>>> b100d6cf160545de6c7f336ffd0facd954b1a46b
     return 0;
 }
