@@ -85,4 +85,4 @@ this algorithm should work for all numbers between 000 and 100.
 
 ## Conclusion
 
-- This is the best project i made in the `C` language for now and i will improve my skills to be better int he next project 💪 Inshallah.
+- This is the best project i made in the `C` language for now and i will improve my skills to be better in the next project 💪 Inshallah.
