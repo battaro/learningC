@@ -215,17 +215,18 @@ void progressBar(int sleepTime)
 }
 int generateTaskId()
 {
-    srand(time(NULL));
-    int id = rand() % 1000;
+    srand(time(NULL)); // seed the random number generator
+    int id = rand() % 1000; // generate a random number between 0 and 999
     for (int i = 0; i < 1000; i++)
     {
+        // check if the generated number already exists in the tasks array
         while (id == tasks[i].taskid)
         {
             id = rand() % 1000;
         }
     }
 
-    return id;
+    return id; // return the generated task ID
 }
 
 void clearScreen()

@@ -1,0 +1,6 @@
+001	Lord of the Rings	J.R.R. Tolkien	99	100
+002	The Atomic Habits	James Clear	5	100
+003	Clean Code: A Handbook of Agile Software Craftsmanship	Robert C. Martin	5	100
+004	The Great Gatsby	F. Scott Fitzgerald	0	100
+005	To Kill a Mockingbird	Harper Lee	2	100
+006	1984	George Orwell	3	100

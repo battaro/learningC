@@ -74,20 +74,61 @@
 // for example : printf("\rLoading: 25%%"); then printf("\rLoading: 50%%"); if i put sleep function
 //                                                 between them, it will print 50% on the same line
 
+// binary is easy to read from binary to decimal just read it from left to right and do this thing :
+// lets say we have this binary 00000001 basically 1 in decimal because 1 * 2^0 = 1,
+// do it again for 00000010 which is 2 in decimal because 2 * 2^1 = 2,
+// last example 00000111 which is 7 in decimal 1 * 2^2 + | 1 * 2^1 + | 1 * 2^0 = 7
+
+#include <stdio.h>
+#include <stdbool.h>
+
 int main()
 {
+    // Binary Search for letters
+    char alphabet[26] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+    int size = sizeof(alphabet) / sizeof(alphabet[0]);
 
-    printf("Loading...\n");
+    printf("Search for a letter (A-Z): ");
 
-    printf("Progress: 25%%");
-    Sleep(2000);
+    char searchedLetter = 0;
+    scanf(" %c", &searchedLetter);
+    searchedLetter = toupper(searchedLetter);
+    
+    int low = 0;
+    int high = size - 1;
+    int mid;
+    bool found = false;
 
-    printf("\rProgress: 50%%");
-    Sleep(2000);
-    printf("\rProgress: 75%%");
-    Sleep(2000);
+    int i = 0;
+    while (low <= high)
+    {
+        i++;
+        mid = (low + high) / 2;
+        printf("low = %c, high = %c, mid = %c\n", alphabet[low], alphabet[high], alphabet[mid]);
 
-    printf("\rProgress: 100%%\n");
+        if (alphabet[mid] == searchedLetter)
+        {
+            found = true;
+            break;
+        }
+        else if (alphabet[mid] < searchedLetter)
+        {
+            low = mid + 1;
+        }
+        else
+        {
+            high = mid - 1;
+        }
+    }
+
+    if (found)
+    {
+        printf("Found %c in %d iterations\n", searchedLetter, i);
+    }
+    else
+    {
+        printf("Not Found in %d iterations\n", i);
+    }
 
     return 0;
 }
