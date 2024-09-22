@@ -30,8 +30,8 @@ Through this project, I gained valuable experience in **file management** and de
 - So this is the first algorithm used here :
 
 ```c
-	//This is just an example.
- 	char id[100] = "007";
+    //This is just an example.
+    char id[100] = "007";
     int lastNum = 0;
 
     for (int i = 0; i < 3; i++)
@@ -58,8 +58,8 @@ so what happened here that we skipped all zeros and added 1 to the last number t
 - We should use the next algorithm in ID generation which is this :
 
 ```c
-	//This is just an example.
- 	id[0] = '0' + (lastNum / 100 % 10);
+    //This is just an example.
+    id[0] = '0' + (lastNum / 100 % 10);
     id[1] = '0' + (lastNum / 10 % 10);
     id[2] = '0' + (lastNum % 10);
 
