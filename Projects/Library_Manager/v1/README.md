@@ -7,7 +7,7 @@ Through this project, I gained valuable experience in **file management** and de
 ## Features
 
 - Add new books to the library
-- Delete books from the library 
+- Delete books from the library
 - Borrow books
 - Return books
 - Track book quantities and availability status
@@ -78,9 +78,11 @@ so the full id will be 008
 this algorithm should work for all numbers between 000 and 100.
 
 ### Searching Algorithm
-- I wanted to use [Binary Search](https://www.geeksforgeeks.org/binary-search/) for `SearchBook` function but i use d [Linear Search](https://www.geeksforgeeks.org/linear-search/) instead, because linear searching logic is more efficient for this project after thinking.
+
+- I wanted to use [Binary Search](https://www.geeksforgeeks.org/binary-search/) for `SearchBook` function but i used [Linear Search](https://www.geeksforgeeks.org/linear-search/) instead, because linear searching logic is more efficient for this project after thinking.
 - Its simple and i clarified how i make it in code using [strstr()](https://www.geeksforgeeks.org/strstr-in-ccpp/) function.
 - I also used a function call `toLowerCase()` to change the title and the author's name to lowercase using [tolower()](https://www.geeksforgeeks.org/tolower-function-in-c/) function, to implement the searching in lowercase.
 
 ## Conclusion
+
 - This is the best project i made in the `C` language for now and i will improve my skills to be better int he next project 💪 Inshallah.
